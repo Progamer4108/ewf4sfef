@@ -1,5 +1,5 @@
 
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyAYb_VCyN7Zt5874VyJr2gDfNku_xXTo8U",
     authDomain: "practice-a86a8.firebaseapp.com",
     databaseURL: "https://practice-a86a8-default-rtdb.firebaseio.com",
@@ -11,8 +11,8 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  
+  firebase.initializeApp(firebaseConfig);
+
   function addUser() {
       user_name = document.getElementById("user_name").value;
       firebase.database().ref("/").child(user_name).update({
